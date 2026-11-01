@@ -1,0 +1,19 @@
+model = "Qwen/Qwen3-0.6B"
+group_size = 2
+
+[select]
+limit = 8
+
+[client]
+base_url = "http://localhost:8000/v1"
+
+[sampling]
+max_completion_tokens = 900
+
+[[source]]
+name = "geotech-poles"
+env.taskset.id = "geotech-poles"
+env.taskset.levels = [1]
+env.taskset.num_seeds = 12
+env.agent.harness.id = "null"
+env.agent.runtime.type = "subprocess"

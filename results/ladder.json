@@ -1,0 +1,11 @@
+{
+  "split": "heldout",
+  "note": "Solved episodes over episodes run. Warm-up levels N0 and N1 hold no decision. Models trained before the demonstrations lost their rain filter, so N4 is not a learned decision.",
+  "models": {
+    "qwen3-4b-base": {"n0": "28/180", "n1": "0/60", "n2": "0/9", "n3": "0/9", "n4": "0/9"},
+    "qwen3-4b-sft": {"n0": "17/24", "n1": "18/24", "n2": "0/24", "n3": "2/24", "n4": "15/24"},
+    "qwen3-4b-sft-grpo": {"n0": "24/24", "n1": "24/24", "n2": "0/24", "n3": "3/24", "n4": "24/24", "n5": "0/24"},
+    "claude-opus-5-5-medium": {"n5": "4/4", "n6": "4/4", "n7": "4/4", "n8": "3/4"}
+  },
+  "gpu_spend_usd": 8.27
+}

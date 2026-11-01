@@ -1,0 +1,604 @@
+{
+ "0": {
+  "beta_reference_p5": 2.32,
+  "beta_wrong_p5": null,
+  "single_wetting_factor": null,
+  "nulls": {
+   "routes": {
+    "all_tests": 1.0,
+    "constant": 0.0,
+    "dry_only": 1.0,
+    "geometry_index": 0.0,
+    "ignore_units": 1.0,
+    "keep_cracked": 1.0,
+    "latest": 0.983,
+    "poured_diameter": 1.0,
+    "sheet_diameter": 1.0,
+    "weakest": 0.967
+   },
+   "outside_controls": {
+    "all_tests": 1.0,
+    "constant": 0.0,
+    "dry_only": 1.0,
+    "geometry_index": 0.0,
+    "ignore_units": 1.0,
+    "keep_cracked": 1.0,
+    "latest": 0.983,
+    "poured_diameter": 1.0,
+    "sheet_diameter": 1.0,
+    "weakest": 0.967
+   },
+   "declared": [],
+   "control_share": 0.0,
+   "leaking": [],
+   "passed_gate": true
+  },
+  "train": {
+   "instances": 1000,
+   "unique_signatures": 9,
+   "wet_position_entropy_bits": -0.0,
+   "wet_positions": 1,
+   "controls": {
+    "none": 1000
+   },
+   "records_jaccard_mean": 0.59,
+   "records_jaccard_max": 0.623,
+   "nearest_physics_distance_median": 0.204,
+   "site_constant_cv": 0.424
+  },
+  "memorisation_heldout": {
+   "train_coverage": 0.184,
+   "exact": 1.0,
+   "memorised": 0.16
+  },
+  "memorisation_ood": {
+   "train_coverage": 0.184,
+   "exact": 1.0,
+   "memorised": 0.0
+  }
+ },
+ "1": {
+  "beta_reference_p5": 2.78,
+  "beta_wrong_p5": null,
+  "single_wetting_factor": null,
+  "nulls": {
+   "routes": {
+    "all_tests": 1.0,
+    "constant": 0.0,
+    "dry_only": 1.0,
+    "geometry_index": 0.0,
+    "ignore_units": 1.0,
+    "keep_cracked": 1.0,
+    "latest": 0.967,
+    "poured_diameter": 1.0,
+    "sheet_diameter": 1.0,
+    "weakest": 0.917
+   },
+   "outside_controls": {
+    "all_tests": 1.0,
+    "constant": 0.0,
+    "dry_only": 1.0,
+    "geometry_index": 0.0,
+    "ignore_units": 1.0,
+    "keep_cracked": 1.0,
+    "latest": 0.967,
+    "poured_diameter": 1.0,
+    "sheet_diameter": 1.0,
+    "weakest": 0.917
+   },
+   "declared": [],
+   "control_share": 0.0,
+   "leaking": [],
+   "passed_gate": true
+  },
+  "train": {
+   "instances": 1000,
+   "unique_signatures": 9,
+   "wet_position_entropy_bits": -0.0,
+   "wet_positions": 1,
+   "controls": {
+    "none": 1000
+   },
+   "records_jaccard_mean": 0.444,
+   "records_jaccard_max": 0.492,
+   "nearest_physics_distance_median": 0.215,
+   "site_constant_cv": 0.434
+  },
+  "memorisation_heldout": {
+   "train_coverage": 0.176,
+   "exact": 1.0,
+   "memorised": 0.13
+  },
+  "memorisation_ood": {
+   "train_coverage": 0.176,
+   "exact": 1.0,
+   "memorised": 0.0
+  }
+ },
+ "2": {
+  "beta_reference_p5": 3.03,
+  "beta_wrong_p5": 10.3,
+  "single_wetting_factor": null,
+  "nulls": {
+   "routes": {
+    "all_tests": 1.0,
+    "constant": 0.0,
+    "dry_only": 1.0,
+    "geometry_index": 0.0,
+    "ignore_units": 0.183,
+    "keep_cracked": 1.0,
+    "latest": 0.983,
+    "poured_diameter": 1.0,
+    "sheet_diameter": 1.0,
+    "weakest": 0.933
+   },
+   "outside_controls": {
+    "all_tests": 1.0,
+    "constant": 0.0,
+    "dry_only": 1.0,
+    "geometry_index": 0.0,
+    "ignore_units": 0.0,
+    "keep_cracked": 1.0,
+    "latest": 0.98,
+    "poured_diameter": 1.0,
+    "sheet_diameter": 1.0,
+    "weakest": 0.939
+   },
+   "declared": [
+    "ignore_units"
+   ],
+   "control_share": 0.183,
+   "leaking": [],
+   "passed_gate": true
+  },
+  "train": {
+   "instances": 1000,
+   "unique_signatures": 54,
+   "wet_position_entropy_bits": -0.0,
+   "wet_positions": 1,
+   "controls": {
+    "none": 793,
+    "soft_unit": 207
+   },
+   "records_jaccard_mean": 0.434,
+   "records_jaccard_max": 0.504,
+   "nearest_physics_distance_median": 0.205,
+   "site_constant_cv": 0.426
+  },
+  "memorisation_heldout": {
+   "train_coverage": 0.174,
+   "exact": 1.0,
+   "memorised": 0.12
+  },
+  "memorisation_ood": {
+   "train_coverage": 0.174,
+   "exact": 1.0,
+   "memorised": 0.0
+  }
+ },
+ "3": {
+  "beta_reference_p5": 2.31,
+  "beta_wrong_p5": 3.47,
+  "single_wetting_factor": null,
+  "nulls": {
+   "routes": {
+    "all_tests": 1.0,
+    "constant": 0.0,
+    "dry_only": 1.0,
+    "geometry_index": 0.0,
+    "ignore_units": 1.0,
+    "keep_cracked": 0.2,
+    "latest": 0.967,
+    "poured_diameter": 1.0,
+    "sheet_diameter": 1.0,
+    "weakest": 0.933
+   },
+   "outside_controls": {
+    "all_tests": 1.0,
+    "constant": 0.0,
+    "dry_only": 1.0,
+    "geometry_index": 0.0,
+    "ignore_units": 1.0,
+    "keep_cracked": 0.0,
+    "latest": 0.958,
+    "poured_diameter": 1.0,
+    "sheet_diameter": 1.0,
+    "weakest": 0.938
+   },
+   "declared": [
+    "keep_cracked"
+   ],
+   "control_share": 0.2,
+   "leaking": [],
+   "passed_gate": true
+  },
+  "train": {
+   "instances": 1000,
+   "unique_signatures": 27,
+   "wet_position_entropy_bits": -0.0,
+   "wet_positions": 1,
+   "controls": {
+    "hairline": 221,
+    "none": 779
+   },
+   "records_jaccard_mean": 0.488,
+   "records_jaccard_max": 0.542,
+   "nearest_physics_distance_median": 0.218,
+   "site_constant_cv": 0.426
+  },
+  "memorisation_heldout": {
+   "train_coverage": 0.166,
+   "exact": 1.0,
+   "memorised": 0.11
+  },
+  "memorisation_ood": {
+   "train_coverage": 0.166,
+   "exact": 1.0,
+   "memorised": 0.0
+  }
+ },
+ "4": {
+  "beta_reference_p5": 2.3,
+  "beta_wrong_p5": 2.36,
+  "single_wetting_factor": {
+   "factor": 0.735,
+   "train": 0.682,
+   "heldout": 0.715,
+   "ood": 0.675
+  },
+  "nulls": {
+   "routes": {
+    "all_tests": 0.083,
+    "constant": 0.0,
+    "dry_only": 0.0,
+    "geometry_index": 0.0,
+    "ignore_units": 1.0,
+    "keep_cracked": 1.0,
+    "latest": 0.183,
+    "poured_diameter": 1.0,
+    "sheet_diameter": 1.0,
+    "weakest": 0.0
+   },
+   "outside_controls": {
+    "all_tests": 0.0,
+    "constant": 0.0,
+    "dry_only": 0.0,
+    "geometry_index": 0.0,
+    "ignore_units": 1.0,
+    "keep_cracked": 1.0,
+    "latest": 0.0,
+    "poured_diameter": 1.0,
+    "sheet_diameter": 1.0,
+    "weakest": 0.0
+   },
+   "declared": [
+    "dry_only",
+    "all_tests",
+    "weakest",
+    "latest"
+   ],
+   "control_share": 0.233,
+   "leaking": [],
+   "passed_gate": true
+  },
+  "train": {
+   "instances": 1000,
+   "unique_signatures": 160,
+   "wet_position_entropy_bits": 3.32,
+   "wet_positions": 10,
+   "controls": {
+    "none": 802,
+    "low_suction": 198
+   },
+   "records_jaccard_mean": 0.436,
+   "records_jaccard_max": 0.486,
+   "nearest_physics_distance_median": 0.217,
+   "site_constant_cv": 0.414
+  },
+  "memorisation_heldout": {
+   "train_coverage": 0.167,
+   "exact": 1.0,
+   "memorised": 0.13
+  },
+  "memorisation_ood": {
+   "train_coverage": 0.167,
+   "exact": 1.0,
+   "memorised": 0.0
+  }
+ },
+ "5": {
+  "beta_reference_p5": 2.35,
+  "beta_wrong_p5": 2.29,
+  "single_wetting_factor": {
+   "factor": 0.747,
+   "train": 0.795,
+   "heldout": 0.755,
+   "ood": 0.86
+  },
+  "nulls": {
+   "routes": {
+    "all_tests": 0.033,
+    "constant": 0.0,
+    "dry_only": 0.0,
+    "geometry_index": 0.0,
+    "ignore_units": 0.083,
+    "keep_cracked": 0.033,
+    "latest": 0.067,
+    "poured_diameter": 1.0,
+    "sheet_diameter": 1.0,
+    "weakest": 0.0
+   },
+   "outside_controls": {
+    "all_tests": 0.0,
+    "constant": 0.0,
+    "dry_only": 0.0,
+    "geometry_index": 0.0,
+    "ignore_units": 0.0,
+    "keep_cracked": 0.0,
+    "latest": 0.0,
+    "poured_diameter": 1.0,
+    "sheet_diameter": 1.0,
+    "weakest": 0.0
+   },
+   "declared": [
+    "ignore_units",
+    "keep_cracked",
+    "dry_only",
+    "all_tests",
+    "weakest",
+    "latest"
+   ],
+   "control_share": 0.183,
+   "leaking": [],
+   "passed_gate": true
+  },
+  "train": {
+   "instances": 1000,
+   "unique_signatures": 461,
+   "wet_position_entropy_bits": 4.3,
+   "wet_positions": 20,
+   "controls": {
+    "soft_unit": 66,
+    "none": 807,
+    "hairline": 59,
+    "low_suction": 68
+   },
+   "records_jaccard_mean": 0.38,
+   "records_jaccard_max": 0.442,
+   "nearest_physics_distance_median": 0.216,
+   "site_constant_cv": 0.424
+  },
+  "memorisation_heldout": {
+   "train_coverage": 0.187,
+   "exact": 1.0,
+   "memorised": 0.16
+  },
+  "memorisation_ood": {
+   "train_coverage": 0.187,
+   "exact": 1.0,
+   "memorised": 0.0
+  }
+ },
+ "6": {
+  "beta_reference_p5": 2.33,
+  "beta_wrong_p5": 2.29,
+  "single_wetting_factor": {
+   "factor": 0.748,
+   "train": 0.767,
+   "heldout": 0.77,
+   "ood": 0.845
+  },
+  "nulls": {
+   "routes": {
+    "all_tests": 0.0,
+    "constant": 0.0,
+    "dry_only": 0.0,
+    "geometry_index": 0.0,
+    "ignore_units": 0.033,
+    "keep_cracked": 0.083,
+    "latest": 0.067,
+    "poured_diameter": 1.0,
+    "sheet_diameter": 1.0,
+    "weakest": 0.0
+   },
+   "outside_controls": {
+    "all_tests": 0.0,
+    "constant": 0.0,
+    "dry_only": 0.0,
+    "geometry_index": 0.0,
+    "ignore_units": 0.0,
+    "keep_cracked": 0.0,
+    "latest": 0.0,
+    "poured_diameter": 1.0,
+    "sheet_diameter": 1.0,
+    "weakest": 0.0
+   },
+   "declared": [
+    "ignore_units",
+    "keep_cracked",
+    "dry_only",
+    "all_tests",
+    "weakest",
+    "latest"
+   ],
+   "control_share": 0.2,
+   "leaking": [],
+   "passed_gate": true
+  },
+  "train": {
+   "instances": 1000,
+   "unique_signatures": 999,
+   "wet_position_entropy_bits": 4.31,
+   "wet_positions": 20,
+   "controls": {
+    "none": 804,
+    "low_suction": 69,
+    "hairline": 74,
+    "soft_unit": 53
+   },
+   "records_jaccard_mean": 0.355,
+   "records_jaccard_max": 0.412,
+   "nearest_physics_distance_median": 0.223,
+   "site_constant_cv": 0.434
+  },
+  "memorisation_heldout": {
+   "train_coverage": 0.204,
+   "exact": 1.0,
+   "memorised": 0.14
+  },
+  "memorisation_ood": {
+   "train_coverage": 0.204,
+   "exact": 1.0,
+   "memorised": 0.0
+  }
+ },
+ "7": {
+  "beta_reference_p5": 2.44,
+  "beta_wrong_p5": 2.08,
+  "single_wetting_factor": {
+   "factor": 0.751,
+   "train": 0.85,
+   "heldout": 0.825,
+   "ood": 0.91
+  },
+  "nulls": {
+   "routes": {
+    "all_tests": 0.0,
+    "constant": 0.0,
+    "dry_only": 0.0,
+    "geometry_index": 0.0,
+    "ignore_units": 0.0,
+    "keep_cracked": 0.05,
+    "latest": 0.0,
+    "poured_diameter": 0.933,
+    "sheet_diameter": 0.083,
+    "weakest": 0.0
+   },
+   "outside_controls": {
+    "all_tests": 0.0,
+    "constant": 0.0,
+    "dry_only": 0.0,
+    "geometry_index": 0.0,
+    "ignore_units": 0.0,
+    "keep_cracked": 0.0,
+    "latest": 0.0,
+    "poured_diameter": 1.0,
+    "sheet_diameter": 0.0,
+    "weakest": 0.0
+   },
+   "declared": [
+    "ignore_units",
+    "keep_cracked",
+    "dry_only",
+    "all_tests",
+    "weakest",
+    "latest",
+    "sheet_diameter"
+   ],
+   "control_share": 0.117,
+   "leaking": [],
+   "passed_gate": true
+  },
+  "train": {
+   "instances": 1000,
+   "unique_signatures": 1000,
+   "wet_position_entropy_bits": 4.31,
+   "wet_positions": 20,
+   "controls": {
+    "none": 820,
+    "hairline": 79,
+    "ticket_swap": 101
+   },
+   "records_jaccard_mean": 0.359,
+   "records_jaccard_max": 0.48,
+   "nearest_physics_distance_median": 0.22,
+   "site_constant_cv": 0.432
+  },
+  "memorisation_heldout": {
+   "train_coverage": 0.193,
+   "exact": 1.0,
+   "memorised": 0.11
+  },
+  "memorisation_ood": {
+   "train_coverage": 0.193,
+   "exact": 1.0,
+   "memorised": 0.0
+  }
+ },
+ "8": {
+  "beta_reference_p5": 2.33,
+  "beta_wrong_p5": 2.16,
+  "single_wetting_factor": {
+   "factor": 0.733,
+   "train": 0.589,
+   "heldout": 0.53,
+   "ood": 0.615
+  },
+  "nulls": {
+   "routes": {
+    "all_tests": 0.05,
+    "constant": 0.0,
+    "dry_only": 0.033,
+    "geometry_index": 0.0,
+    "ignore_units": 0.0,
+    "keep_cracked": 0.0,
+    "lab_phi": 0.0,
+    "latest": 0.05,
+    "poured_diameter": 0.9,
+    "sheet_diameter": 0.183,
+    "weakest": 0.0
+   },
+   "outside_controls": {
+    "all_tests": 0.0,
+    "constant": 0.0,
+    "dry_only": 0.0,
+    "geometry_index": 0.0,
+    "ignore_units": 0.0,
+    "keep_cracked": 0.0,
+    "lab_phi": 0.0,
+    "latest": 0.0,
+    "poured_diameter": 1.0,
+    "sheet_diameter": 0.0,
+    "weakest": 0.0
+   },
+   "declared": [
+    "ignore_units",
+    "keep_cracked",
+    "dry_only",
+    "all_tests",
+    "weakest",
+    "latest",
+    "sheet_diameter",
+    "lab_phi"
+   ],
+   "control_share": 0.183,
+   "leaking": [],
+   "passed_gate": true
+  },
+  "train": {
+   "instances": 1000,
+   "unique_signatures": 1000,
+   "wet_position_entropy_bits": 5.77,
+   "wet_positions": 56,
+   "controls": {
+    "none": 807,
+    "low_suction": 98,
+    "ticket_swap": 95
+   },
+   "records_jaccard_mean": 0.352,
+   "records_jaccard_max": 0.453,
+   "nearest_physics_distance_median": 0.209,
+   "site_constant_cv": 0.432
+  },
+  "memorisation_heldout": {
+   "train_coverage": 0.173,
+   "exact": 1.0,
+   "memorised": 0.13
+  },
+  "memorisation_ood": {
+   "train_coverage": 0.173,
+   "exact": 1.0,
+   "memorised": 0.0
+  }
+ }
+}

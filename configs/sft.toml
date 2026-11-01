@@ -1,0 +1,61 @@
+# Short supervised warm start on oracle demonstrations. Started by scripts/sft.sh, which brings inference up first.
+max_steps = 200
+
+[model]
+name = "Qwen/Qwen3-4B-Instruct-2507"
+optimization_dtype = "bfloat16"
+reduce_dtype = "bfloat16"
+
+[model.ac]
+
+[model.lora]
+rank = 16
+alpha = 32
+
+[data]
+name = "/root/work/demos"
+seq_len = 4096
+batch_size = 8
+
+[optim]
+lr = 2e-4
+weight_decay = 0.0
+
+[eval]
+interval = 100
+skip_first_step = true
+group_size = 3
+
+[eval.client]
+admin_base_url = ["http://localhost:8100"]
+
+[eval.select]
+limit = 20
+
+[eval.sampling]
+max_completion_tokens = 2048
+
+[eval.concurrency]
+initial_inflight = 20
+min_inflight = 16
+max_inflight = 24
+
+[[eval.source]]
+name = "heldout-n0"
+env.taskset.id = "geotech-poles"
+env.taskset.levels = [0]
+env.taskset.split = "heldout"
+env.taskset.num_seeds = 20
+env.agent.harness.id = "null"
+env.agent.runtime.type = "subprocess"
+
+[[eval.source]]
+name = "heldout-n1"
+env.taskset.id = "geotech-poles"
+env.taskset.levels = [1]
+env.taskset.split = "heldout"
+env.taskset.num_seeds = 20
+env.agent.harness.id = "null"
+env.agent.runtime.type = "subprocess"
+
+[ckpt]

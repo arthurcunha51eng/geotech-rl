@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it."
+title: "geotech-rl"
+type: software
+
+authors:
+  - family-names: "Cunha da Silva"
+    given-names: "Arthur"
+
+version: "0.1.0"
+date-released: "2026-11-01"
+
+license: MIT

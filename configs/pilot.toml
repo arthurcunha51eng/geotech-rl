@@ -1,0 +1,96 @@
+# GRPO with LoRA on one GPU, from the model warmed up by SFT. Started by scripts/train.sh, which brings inference up first.
+# Demonstrations cover N0 and N1 only: anything gained on N2 and N3 comes from the reward.
+max_steps = 20
+seq_len = 8192
+
+[model]
+name = "/root/work/models/Qwen3-4B-Instruct-2507-sft"
+
+# float32 weights take 16 GB of a card shared with inference.
+[trainer.model]
+optimization_dtype = "bfloat16"
+reduce_dtype = "bfloat16"
+
+[trainer.model.ac]
+
+[trainer.model.lora]
+rank = 16
+alpha = 32
+
+[trainer.optim]
+lr = 5e-5
+weight_decay = 0.0
+
+[orchestrator]
+batch_size = 64
+
+[orchestrator.renderer]
+name = "qwen3"
+
+[orchestrator.train]
+group_size = 8
+
+# Tasks are served in order: a whole level with no reward variance would stall training.
+[orchestrator.train.select]
+shuffle = true
+
+# The automatic start divides the KV cache by the 32k context limit and ramps from about 5 episodes.
+[orchestrator.concurrency]
+initial_inflight = 18
+min_inflight = 14
+max_inflight = 20
+
+# The sampling the held-out baseline ran at. The trainer replays the sampling masks.
+[orchestrator.train.sampling]
+temperature = 0.7
+top_p = 0.8
+top_k = 20
+max_completion_tokens = 2048
+
+[[orchestrator.train.source]]
+name = "geotech-poles"
+env.taskset.id = "geotech-poles"
+env.taskset.levels = [1, 2]
+env.taskset.split = "train"
+env.taskset.num_seeds = 400
+env.agent.harness.id = "null"
+env.agent.runtime.type = "subprocess"
+
+[orchestrator.eval]
+interval = 20
+group_size = 3
+
+[orchestrator.eval.select]
+limit = 20
+
+[orchestrator.eval.sampling]
+max_completion_tokens = 2048
+
+[[orchestrator.eval.source]]
+name = "heldout-n1"
+env.taskset.id = "geotech-poles"
+env.taskset.levels = [1]
+env.taskset.split = "heldout"
+env.taskset.num_seeds = 20
+env.agent.harness.id = "null"
+env.agent.runtime.type = "subprocess"
+
+[[orchestrator.eval.source]]
+name = "heldout-n2"
+env.taskset.id = "geotech-poles"
+env.taskset.levels = [2]
+env.taskset.split = "heldout"
+env.taskset.num_seeds = 20
+env.agent.harness.id = "null"
+env.agent.runtime.type = "subprocess"
+
+[[orchestrator.eval.source]]
+name = "heldout-n3"
+env.taskset.id = "geotech-poles"
+env.taskset.levels = [3]
+env.taskset.split = "heldout"
+env.taskset.num_seeds = 20
+env.agent.harness.id = "null"
+env.agent.runtime.type = "subprocess"
+
+[ckpt]
