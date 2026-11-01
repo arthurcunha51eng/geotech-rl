@@ -107,6 +107,8 @@ Stack: [prime-rl](https://github.com/PrimeIntellect-ai/prime-rl) and verifiers, 
 
 Oracle demonstrations and the open model's own rollouts are the only training data. Outputs from closed models only measure.
 
+The adapters are on Hugging Face: [SFT](https://huggingface.co/arthurcs01/geotech-rl-qwen3-4b-sft) and [SFT + GRPO](https://huggingface.co/arthurcs01/geotech-rl-qwen3-4b-sft-grpo).
+
 [`docs/RL_FAILURE_MODES.md`](docs/RL_FAILURE_MODES.md) records every failure, with its evidence and the guard that now prevents it.
 
 ## Known limits
