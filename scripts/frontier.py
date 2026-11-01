@@ -35,11 +35,11 @@ Your only tools are these commands:
 
 
 def episode(job: dict) -> dict:
-    row, args, config = job["row"], job["args"], job["config"]
+    row, args = job["row"], job["args"]
     session = SESSIONS / f"{args.tag}-n{row['level']}-{row['seed']}"
     session.mkdir(parents=True, exist_ok=True)
     env = dict(os.environ, GEOTECH_SEED=str(row["seed"]), GEOTECH_LEVEL=str(row["level"]), GEOTECH_SPLIT=row["split"],
-               GEOTECH_ATTEMPT=str(row["attempt"]), GEOTECH_SESSION=str(session), GEOTECH_BLIND="1", CLAUDE_CONFIG_DIR=config)
+               GEOTECH_ATTEMPT=str(row["attempt"]), GEOTECH_SESSION=str(session), GEOTECH_BLIND="1")
     with tempfile.TemporaryDirectory() as tmp:
         built = instance.build(row["seed"], row["level"], Path(tmp), row["split"], attempt=row["attempt"])
         files = "Files: " + ", ".join(sorted(p.relative_to(tmp).as_posix() for p in Path(tmp).rglob("*") if p.is_file())) + "\n"
@@ -76,16 +76,14 @@ def main() -> None:
     parser.add_argument("--skip", type=int, default=0)
     parser.add_argument("--model", default="claude-opus-5-5")
     parser.add_argument("--effort", default="medium")
-    parser.add_argument("--configs", default=str(Path.home() / ".claude"), help="comma separated account directories")
     parser.add_argument("--workers", type=int, default=2)
     parser.add_argument("--timeout", type=int, default=900)
     parser.add_argument("--tag", default="ref")
     parser.add_argument("--out", required=True)
     args = parser.parse_args()
-    configs = args.configs.split(",")
     rows = [r for level in args.levels.split(",")
             for r in quality.read_manifest(ROOT / "manifests" / f"heldout_n{level}.jsonl")[args.skip:args.skip + args.count]]
-    jobs = [dict(row=r, args=args, config=configs[i % len(configs)]) for i, r in enumerate(rows)]
+    jobs = [dict(row=r, args=args) for r in rows]
     with ThreadPoolExecutor(args.workers) as pool, open(args.out, "a", encoding="utf-8") as out:
         for result in pool.map(episode, jobs):
             out.write(json.dumps(result) + "\n")

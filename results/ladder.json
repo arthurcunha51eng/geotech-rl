@@ -1,6 +1,6 @@
 {
   "split": "heldout",
-  "note": "Solved episodes over episodes run. Warm-up levels N0 and N1 hold no decision. Models trained before the demonstrations lost their rain filter, so N4 is not a learned decision.",
+  "note": "Solved episodes over episodes run. Warm-up levels N0 and N1 hold no decision. Models trained before the demonstrations lost their rain filter, so N4 is not a learned decision. Base N0 and N1 predate the ladder recalibration.",
   "models": {
     "qwen3-4b-base": {"n0": "28/180", "n1": "0/60", "n2": "0/9", "n3": "0/9", "n4": "0/9"},
     "qwen3-4b-sft": {"n0": "17/24", "n1": "18/24", "n2": "0/24", "n3": "2/24", "n4": "15/24"},

@@ -1,0 +1,21 @@
+{
+  "title": "geotech-rl: a procedural reinforcement-learning environment for geotechnical judgement",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "mit",
+  "description": "<p>A procedural reinforcement-learning environment built from a geotechnical decision: which lighting-pole foundations must be redone, given messy site records. It generates seeded instances with a physics-based truth, discards instances that a listed wrong route can solve, and trains a small open model with SFT and GRPO. All data is synthetic.</p><p>AI use: Claude Code with Claude Opus 5.5 wrote most of the code, ran the experiments and drafted the documentation under the author's direction. The engineering problem, its physical mechanism, and the review and publication decisions are the author's. Claude Opus 5.5 also served as the frontier reference and the red team, and its outputs never became training data.</p>",
+  "creators": [
+    {
+      "name": "Cunha da Silva, Arthur",
+      "affiliation": "Independent Researcher",
+      "orcid": "0009-0007-6285-6903"
+    }
+  ],
+  "keywords": [
+    "reinforcement learning",
+    "procedural environment",
+    "geotechnical engineering",
+    "GRPO",
+    "AI evaluation"
+  ]
+}

@@ -1,13 +1,27 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it."
-title: "geotech-rl"
+title: "geotech-rl: a procedural reinforcement-learning environment for geotechnical judgement"
 type: software
 
 authors:
   - family-names: "Cunha da Silva"
     given-names: "Arthur"
+    orcid: "https://orcid.org/0009-0007-6285-6903"
 
+repository-code: "https://github.com/arthurcunha51eng/geotech-rl"
 version: "0.1.0"
-date-released: "2026-11-01"
-
 license: MIT
+
+abstract: >-
+  A procedural reinforcement-learning environment built from a geotechnical
+  decision: which lighting-pole foundations must be redone, given messy site
+  records. It generates seeded instances with a physics-based truth, discards
+  instances that a listed wrong route can solve, and trains a small open model
+  with SFT and GRPO. All data is synthetic.
+
+keywords:
+  - reinforcement learning
+  - procedural environment
+  - geotechnical engineering
+  - GRPO
+  - AI evaluation

@@ -9,7 +9,7 @@ requires-python = ">=3.12"
 dependencies = ["numpy>=2.2", "scipy>=1.15"]
 
 [project.optional-dependencies]
-dev = ["pytest>=8", "pandas>=2.2"]
+dev = ["pytest>=8", "pandas>=2.2", "matplotlib>=3.9"]
 
 [project.scripts]
 geotech-rl = "geotech_rl.cli:main"

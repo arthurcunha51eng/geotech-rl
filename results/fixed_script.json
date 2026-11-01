@@ -1,0 +1,56 @@
+{
+ "n0": {
+  "solved": 60,
+  "episodes": 60,
+  "solved_outside_controls": 60,
+  "episodes_outside_controls": 60
+ },
+ "n1": {
+  "solved": 60,
+  "episodes": 60,
+  "solved_outside_controls": 60,
+  "episodes_outside_controls": 60
+ },
+ "n2": {
+  "solved": 0,
+  "episodes": 60,
+  "solved_outside_controls": 0,
+  "episodes_outside_controls": 49
+ },
+ "n3": {
+  "solved": 12,
+  "episodes": 60,
+  "solved_outside_controls": 0,
+  "episodes_outside_controls": 48
+ },
+ "n4": {
+  "solved": 4,
+  "episodes": 60,
+  "solved_outside_controls": 0,
+  "episodes_outside_controls": 46
+ },
+ "n5": {
+  "solved": 0,
+  "episodes": 60,
+  "solved_outside_controls": 0,
+  "episodes_outside_controls": 49
+ },
+ "n6": {
+  "solved": 0,
+  "episodes": 60,
+  "solved_outside_controls": 0,
+  "episodes_outside_controls": 48
+ },
+ "n7": {
+  "solved": 0,
+  "episodes": 60,
+  "solved_outside_controls": 0,
+  "episodes_outside_controls": 53
+ },
+ "n8": {
+  "solved": 0,
+  "episodes": 60,
+  "solved_outside_controls": 0,
+  "episodes_outside_controls": 49
+ }
+}

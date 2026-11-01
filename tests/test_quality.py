@@ -1,9 +1,12 @@
 import json
 import math
+from pathlib import Path
 
 import pytest
 
 from geotech_rl import grader, instance, quality, scenario, solver
+
+MANIFESTS = Path(__file__).parents[1] / "manifests"
 
 
 class _NoInstances:
@@ -32,6 +35,16 @@ def test_filtered_instance_has_margin(level, tmp_path):
 def test_splits_build(level, split, tmp_path):
     built = instance.build(quality.SEED_BASE[split] + 1, level, tmp_path, split)
     assert grader.grade(built.truth, built.scenario.fs_required, solver.solve(tmp_path))["reward"] == 1.0
+
+
+@pytest.mark.parametrize("level", scenario.LEVELS)
+@pytest.mark.parametrize("split", ["train", "heldout", "ood"])
+def test_committed_manifests_match_the_generator(level, split, tmp_path):
+    """Regression: a change to OOD suction left four manifests stale, and no report moved."""
+    for row in quality.read_manifest(MANIFESTS / f"{split}_n{level}.jsonl")[:3]:
+        s = instance.build(row["seed"], level, tmp_path / str(row["seed"]), split, attempt=row["attempt"]).scenario
+        assert (round(s.phi, 2), round(s.n, 3), round(s.c_dry, 2), round(s.density, 3)) == (row["phi"], row["n"], row["c"], row["density"])
+        assert (s.pole_length, s.fs_required, s.control, quality.signature(s)) == (row["length"], row["required"], row["control"], row["signature"])
 
 
 @pytest.mark.parametrize("required", [1.5, 2.0, 2.5])
