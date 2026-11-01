@@ -8,8 +8,9 @@ authors:
     given-names: "Arthur"
     orcid: "https://orcid.org/0009-0007-6285-6903"
 
+doi: "10.5281/zenodo.23861866"
 repository-code: "https://github.com/arthurcunha51eng/geotech-rl"
-version: "0.1.0"
+version: "0.1.1"
 date-released: "2026-11-01"
 license: MIT
 

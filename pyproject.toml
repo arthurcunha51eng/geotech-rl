@@ -1,6 +1,6 @@
 [project]
 name = "geotech-rl"
-version = "0.1.0"
+version = "0.1.1"
 description = "Procedural RL environments for geotechnical engineering judgement."
 readme = "README.md"
 license = { text = "MIT" }

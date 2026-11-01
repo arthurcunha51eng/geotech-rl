@@ -2,6 +2,7 @@
 
 [![tests](https://github.com/arthurcunha51eng/geotech-rl/actions/workflows/tests.yml/badge.svg)](https://github.com/arthurcunha51eng/geotech-rl/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23861866.svg)](https://doi.org/10.5281/zenodo.23861866)
 
 A procedural reinforcement-learning environment built from a real geotechnical decision: which lighting-pole foundations must be redone, given messy site records. It generates seeded instances with a physics-based truth, discards any instance that a listed wrong route can solve, and trains a small open model with SFT and GRPO on one rented GPU.
 
@@ -134,12 +135,13 @@ The engineering problem, its physical mechanism, and the review and publication 
 Use the metadata in [`CITATION.cff`](CITATION.cff), or:
 
 ```bibtex
-@software{cunha_da_silva_geotech_rl,
+@software{cunha_da_silva_geotech_rl_2026,
   author  = {Cunha da Silva, Arthur},
   title   = {geotech-rl: a procedural reinforcement-learning environment
              for geotechnical judgement},
-  url     = {https://github.com/arthurcunha51eng/geotech-rl},
-  version = {0.1.0}
+  year    = {2026},
+  doi     = {10.5281/zenodo.23861866},
+  url     = {https://github.com/arthurcunha51eng/geotech-rl}
 }
 ```
 
